@@ -1,0 +1,7 @@
+Title,Description,Issue ID,URL,State,Author,Author Username,Assignee,Assignee Username,Confidential,Locked,Due Date,Created At (UTC),Updated At (UTC),Closed At (UTC),Milestone,Weight,Labels,Time Estimate,Time Spent
+Изменение ответа API метода GET /rest/api/get_info,"Необходимо исправить метод:
+- Метод: GET `/rest/api/get_info`
+
+Изменение в ответе:
+- Старый текст: `{ ""message"": ""Already started"" }`
+- Новый текст: `{ ""message"": ""Running"" }`",1,https://gavazin.gitlab.yandexcloud.net/gavazin/netology/-/issues/1,Closed,gavazin,gavazin,gavazin,gavazin,No,No,,2024-04-21 00:11:25,2024-04-21 00:41:34,2024-04-21 00:41:34,,,feature,0,0

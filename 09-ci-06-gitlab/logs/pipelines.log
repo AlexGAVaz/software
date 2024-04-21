@@ -1,0 +1,88 @@
+[0KRunning with gitlab-runner 16.11.0 (91a27b2a)[0;m
+[0K  on runner-shell sEvXxE7f, system ID: s_0628c93c9f47[0;m
+section_start:1713659462:prepare_executor
+[0K[0K[36;1mPreparing the "shell" executor[0;m[0;m
+[0KUsing Shell (bash) executor...[0;m
+section_end:1713659462:prepare_executor
+[0Ksection_start:1713659462:prepare_script
+[0K[0K[36;1mPreparing environment[0;m[0;m
+Running on runner-shell...
+section_end:1713659462:prepare_script
+[0Ksection_start:1713659462:get_sources
+[0K[0K[36;1mGetting source from Git repository[0;m[0;m
+[32;1mFetching changes with git depth set to 20...[0;m
+Reinitialized existing Git repository in /home/gitlab-runner/builds/sEvXxE7f/0/gavazin/netology/.git/
+[32;1mChecking out b4dd64da as detached HEAD (ref is main)...[0;m
+[32;1mSkipping Git submodules setup[0;m
+section_end:1713659463:get_sources
+[0Ksection_start:1713659463:step_script
+[0K[0K[36;1mExecuting "step_script" stage of the job script[0;m[0;m
+[32;1m$ docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY[0;m
+WARNING! Using --password via the CLI is insecure. Use --password-stdin.
+WARNING! Your password will be stored unencrypted in /home/gitlab-runner/.docker/config.json.
+Configure a credential helper to remove this warning. See
+https://docs.docker.com/engine/reference/commandline/login/#credentials-store
+
+Login Succeeded
+[32;1m$ docker build -t $IMAGE_TAG .[0;m
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 856B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/centos:7
+#2 DONE 1.1s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.1s
+
+#4 [1/6] FROM docker.io/library/centos:7@sha256:be65f488b7764ad3638f236b7b515b3678369a5124c47b8d32916d6487418ea4
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 111B done
+#5 DONE 0.0s
+
+#6 [2/6] RUN yum -y update &&     yum -y install python3-pip &&     pip3 install --upgrade pip
+#6 CACHED
+
+#7 [4/6] COPY ./python_api/python-api.py ./python-api.py
+#7 CACHED
+
+#8 [5/6] COPY requirements.txt ./requirements.txt
+#8 CACHED
+
+#9 [3/6] WORKDIR /python_api
+#9 CACHED
+
+#10 [6/6] RUN pip3 install -r requirements.txt
+#10 CACHED
+
+#11 exporting to image
+#11 exporting layers done
+#11 writing image sha256:7a7b9989945dbc056558639bbb30a6785d94c6417d1cbab61d7d5da77bbc1831 done
+#11 naming to gavazin.gitlab.yandexcloud.net:5050/gavazin/netology/hello:gitlab-b4dd64da done
+#11 DONE 0.0s
+[32;1m$ docker push $IMAGE_TAG[0;m
+The push refers to repository [gavazin.gitlab.yandexcloud.net:5050/gavazin/netology/hello]
+6e468b0e60be: Preparing
+f9c4e64eb238: Preparing
+f429494a5e7d: Preparing
+ce57e6447997: Preparing
+c90ee8991dc2: Preparing
+174f56854903: Preparing
+174f56854903: Waiting
+6e468b0e60be: Layer already exists
+ce57e6447997: Layer already exists
+f429494a5e7d: Layer already exists
+c90ee8991dc2: Layer already exists
+f9c4e64eb238: Layer already exists
+174f56854903: Layer already exists
+gitlab-b4dd64da: digest: sha256:5630e5a6c8dc133a949967e63b980f2dc536ae8ef91b0b6e67bbabc6c89aa66b size: 1574
+section_end:1713659465:step_script
+[0Ksection_start:1713659465:cleanup_file_variables
+[0K[0K[36;1mCleaning up project directory and file based variables[0;m[0;m
+section_end:1713659465:cleanup_file_variables
+[0K[32;1mJob succeeded[0;m

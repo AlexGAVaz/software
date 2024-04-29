@@ -32,7 +32,7 @@
 
 Ответ:
 
-<img src="./screenshots/screenshots_1.png" alt="alt text" width="1000"/>
+<img src="./screenshots/screenshots_1.png" alt="alt text" width="600"/>
 
 ## Задание 2
 

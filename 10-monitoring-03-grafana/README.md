@@ -71,7 +71,7 @@
 
   `node_filesystem_free_bytes`
 
-![alt text](./screenshots/screenshots_2.png)
+<img src="./screenshots/screenshots_2.png" alt="alt text" width="600"/>
 
 ## Задание 3
 
@@ -79,7 +79,8 @@
 1. В качестве решения задания приведите скриншот вашей итоговой Dashboard.
 
 Ответ:
-![alt text](./screenshots/screenshots_2.png)
+
+<img src="./screenshots/screenshots_3.png" alt="alt text" width="600"/>
 
 ## Задание 4
 

@@ -31,7 +31,8 @@
 1. Решение домашнего задания — скриншот веб-интерфейса grafana со списком подключенных Datasource.
 
 Ответ:
-![alt text](./screenshots/screenshots_1.png)
+
+<img src="./screenshots/screenshots_1.png" alt="alt text" width="1000"/>
 
 ## Задание 2
 

@@ -18,7 +18,8 @@
 В решении приведите скриншоты тестовых событий из каналов нотификаций.
 
 Ответ:
-![alt text](./screenshots/screenshots_4.png)
+
+<img src="./screenshots/screenshots_4.png" alt="alt text" width="200"/>
 
 ## Обязательные задания
 
